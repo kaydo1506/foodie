@@ -9,7 +9,7 @@ export default class View {
    * @param {boolean} [render=true] If false, create markup string instead of rendering to the DOM
    * @returns {undefined | string} A markup string is returned if render=false
    * @this {Object} View instance
-   * @author Ify Okedo
+   * @author Jonas Schmedtmann
    * @todo Finish implementation
    */
   render(data, render = true) {
@@ -28,6 +28,7 @@ export default class View {
   update(data) {
     this._data = data;
     const newMarkup = this._generateMarkup();
+
     const newDOM = document.createRange().createContextualFragment(newMarkup);
     const newElements = Array.from(newDOM.querySelectorAll('*'));
     const curElements = Array.from(this._parentElement.querySelectorAll('*'));
