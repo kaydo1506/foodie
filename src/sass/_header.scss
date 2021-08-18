@@ -1,4 +1,16 @@
 .header {
+  @media only screen and (max-width: 790px) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: grid;
+    padding-right: 10px;
+    // grid-template-columns: repeat(2, 1fr);
+  }
+  @media only screen and (max-width: 470px) {
+    // width: 50px;
+    padding-right: 5px;
+  }
+
   grid-area: head;
   background-color: $color-grey-light-1;
   display: flex;
@@ -10,6 +22,23 @@
     height: 4.6rem;
     display: block;
   }
+  &__form {
+    @media only screen and (max-width: 790px) {
+      grid-column: 2/3;
+      grid-row: 2/3;
+      margin-top: 10px;
+    }
+  }
+  &__nav {
+    @media only screen and (max-width: 790px) {
+      display: flex;
+      justify-content: flex-end;
+    }
+    @media only screen and (max-width: 470px) {
+      display: flex;
+      justify-content: space-evenly;
+    }
+  }
 }
 
 .search {
@@ -19,6 +48,10 @@
   align-items: center;
   padding-left: 3rem;
   transition: all 0.3s;
+  @media only screen and (max-width: 790px) {
+    padding-left: 0;
+    padding-left: 3rem;
+  }
 
   &:focus-within {
     transform: translateY(-2px);
@@ -33,6 +66,10 @@
     font-size: 1.7rem;
     width: 30rem;
 
+    @media only screen and (max-width: 470px) {
+      width: 20rem;
+    }
+
     &:focus {
       outline: none;
     }
@@ -42,7 +79,7 @@
     }
 
     @media only screen and (max-width: $bp-medium) {
-      width: auto;
+      // width: auto;
 
       &::placeholder {
         color: white;
@@ -53,12 +90,22 @@
   &__btn {
     font-weight: 600;
     font-family: inherit;
+    @media only screen and (max-width: 470px) {
+      width: 10rem;
+      padding: 5px 0 5px 25px;
+    }
+    span {
+      display: none;
+    }
   }
 }
 
 .nav {
   align-self: stretch;
   margin-right: 2.5rem;
+  @media only screen and (max-width: 790px) {
+    margin-right: 0;
+  }
 
   &__list {
     list-style: none;
