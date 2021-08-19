@@ -34,9 +34,9 @@ html {
   @media only screen and (max-width: $bp-medium) {
     font-size: 50%;
   }
-  @media only screen and (max-width: 470px) {
-    font-size: 40%;
-  }
+  // @media only screen and (max-width: 470px) {
+  //   font-size: 40%;
+  // }
 }
 
 body {
@@ -45,7 +45,7 @@ body {
   line-height: 1.6;
   @media only screen and (max-width: 750px) {
     line-height: 1.1;
-    margin: 10px;
+    // margin: 10px;
   }
   color: $color-grey-dark-1;
   background-image: $gradient;
