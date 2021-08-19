@@ -1,14 +1,11 @@
 .header {
   @media only screen and (max-width: 750px) {
-    padding: 10px 15px 10px 0;
+    padding: 10px 10px 10px 0;
     display: grid;
     width: auto;
 
     grid-template-columns: repeat(2, 1fr);
   }
-  // @media only screen and (max-width: 490px) {
-  //   padding-right: 5px;
-  // }
 
   grid-area: head;
   background-color: $color-grey-light-1;
@@ -26,6 +23,7 @@
       grid-column: 2/3;
       grid-row: 2/3;
       margin-top: 10px;
+      margin-right: 9px;
     }
     @media only screen and (max-width: 790px) {
       margin-left: 10px;
@@ -98,8 +96,8 @@
     font-weight: 600;
     font-family: inherit;
     @media only screen and (max-width: 490px) {
-      width: 10rem;
-      padding: 5px 0 5px 32px;
+      width: 8rem;
+      padding: 5px 0 5px 23px;
     }
     span {
       @media only screen and (max-width: 520px) {
