@@ -1,9 +1,10 @@
 .header {
   @media only screen and (max-width: 750px) {
-    padding: 10px 20px 10px 0;
+    padding: 10px 0 10px 0;
     display: grid;
+    width: auto;
 
-    // grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
   // @media only screen and (max-width: 490px) {
   //   padding-right: 5px;
@@ -31,10 +32,12 @@
     @media only screen and (max-width: 750px) {
       display: flex;
       justify-content: flex-end;
+      grid-column: 3/4;
     }
-    @media only screen and (max-width: 490px) {
-      display: flex;
-      justify-content: space-evenly;
+    @media only screen and (max-width: 690px) {
+      // display: flex;
+      // justify-content: space-evenly;
+      grid-column: 2/3;
     }
   }
 }
