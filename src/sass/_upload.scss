@@ -72,6 +72,10 @@
     @media only screen and (max-width: 860px) {
       grid-template-columns: 0.5fr 1.2fr;
       gap: 1rem;
+      input[type='text'],
+      input[type='number'] {
+        font-size: 16px;
+      }
     }
 
     & label {
@@ -86,12 +90,6 @@
       border: 1px solid #ddd;
       border-radius: 0.5rem;
       transition: all 0.2s;
-      @media only screen and (max-width: 767px) {
-        input[type='text'],
-        input[type='number'] {
-          font-size: 16px;
-        }
-      }
 
       &::placeholder {
         color: $color-grey-light-3;
