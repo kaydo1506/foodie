@@ -5,10 +5,9 @@
 
     // grid-template-columns: repeat(2, 1fr);
   }
-  @media only screen and (max-width: 490px) {
-    // width: 50px;
-    // padding-right: 5px;
-  }
+  // @media only screen and (max-width: 490px) {
+  //   padding-right: 5px;
+  // }
 
   grid-area: head;
   background-color: $color-grey-light-1;
