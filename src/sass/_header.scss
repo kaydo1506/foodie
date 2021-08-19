@@ -1,10 +1,10 @@
 .header {
   @media only screen and (max-width: 750px) {
-    padding: 10px 0 10px 0;
+    padding: 10px 10px 10px 0;
     display: grid;
     width: auto;
 
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
   // @media only screen and (max-width: 490px) {
   //   padding-right: 5px;
@@ -32,11 +32,6 @@
     @media only screen and (max-width: 750px) {
       display: flex;
       justify-content: flex-end;
-      grid-column: 3/4;
-    }
-    @media only screen and (max-width: 690px) {
-      // display: flex;
-      // justify-content: space-evenly;
       grid-column: 2/3;
     }
   }
@@ -101,11 +96,13 @@
     font-family: inherit;
     @media only screen and (max-width: 490px) {
       width: 10rem;
-      padding: 5px 0 5px 25px;
+      padding: 5px 0 5px 32px;
     }
-    // span {
-    //   display: none;
-    // }
+    span {
+      @media only screen and (max-width: 520px) {
+        display: none;
+      }
+    }
   }
 }
 
