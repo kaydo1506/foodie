@@ -13,23 +13,19 @@
   transition: all 0.5s;
 
   @media only screen and (max-width: 1020px) {
-    width: 80rem;
+    width: 85rem;
     padding: 2rem 2rem;
     position: absolute;
+    top: 70%;
   }
   @media only screen and (max-width: 860px) {
-    position: absolute;
+    width: 74rem;
+  }
 
-    top: 75%;
-  }
-  @media only screen and (max-width: 700px) {
-    width: 53rem;
-    padding-bottom: 2rem;
-    // top: 90%;
-  }
-  @media only screen and (max-width: 460px) {
+  @media only screen and (max-width: 600px) {
     width: 41rem;
-    top: 90%;
+    top: 70%;
+    padding-bottom: 2rem;
   }
 
   .btn--close-modal {
@@ -67,9 +63,13 @@
   grid-template-columns: 1fr 1fr;
   gap: 4rem 6rem;
 
-  @media only screen and (max-width: 860px) {
+  @media only screen and (max-width: 600px) {
     display: block;
     gap: 4rem 2rem;
+  }
+
+  @media only screen and (max-width: 860px) {
+    gap: 2rem 3rem;
   }
 
   &__column {
@@ -79,11 +79,11 @@
     gap: 1.5rem;
 
     @media only screen and (max-width: 860px) {
-      grid-template-columns: 0.5fr 1.1fr;
-      gap: 1rem;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
       input[type='text'],
       input[type='number'] {
-        font-size: 16px;
+        font-size: 13px;
       }
     }
 
@@ -99,9 +99,13 @@
       border: 1px solid #ddd;
       border-radius: 0.5rem;
       transition: all 0.2s;
-      @media only screen and (max-width: 460px) {
-        font-size: 1.2rem;
+      @media only screen and (max-width: 860px) {
+        input[type='text'],
+        input[type='number'] {
+          font-size: 16px;
+        }
       }
+
       &::placeholder {
         color: $color-grey-light-3;
       }
