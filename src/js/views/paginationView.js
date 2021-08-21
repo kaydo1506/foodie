@@ -20,17 +20,20 @@ class PaginationView extends View {
       this._data.results.length / this._data.resultsPerPage
     );
 
+    // page number/numPages
+
     // Page 1, and there are other pages
     if (curPage === 1 && numPages > 1) {
       return `
         <button data-goto="${
           curPage + 1
         }" class="btn--inline pagination__btn--next">
-          <span>Page ${curPage + 1}</span>
+          
           <svg class="search__icon">
             <use href="${icons}#icon-arrow-right"></use>
           </svg>
         </button>
+        <span class="pageNum pagination__btn--mid">${curPage} of ${numPages}</span>
       `;
     }
 
@@ -43,8 +46,9 @@ class PaginationView extends View {
           <svg class="search__icon">
             <use href="${icons}#icon-arrow-left"></use>
           </svg>
-          <span>Page ${curPage - 1}</span>
+          
         </button>
+        <span class="pageNum pagination__btn--mid">${curPage} of ${numPages}</span>
       `;
     }
 
@@ -57,12 +61,15 @@ class PaginationView extends View {
           <svg class="search__icon">
             <use href="${icons}#icon-arrow-left"></use>
           </svg>
-          <span>Page ${curPage - 1}</span>
+          
         </button>
+      
+            <span class="pageNum pagination__btn--mid">${curPage} of ${numPages}</span>
+          
         <button data-goto="${
           curPage + 1
         }" class="btn--inline pagination__btn--next">
-          <span>Page ${curPage + 1}</span>
+          
           <svg class="search__icon">
             <use href="${icons}#icon-arrow-right"></use>
           </svg>
