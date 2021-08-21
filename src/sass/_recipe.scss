@@ -8,6 +8,9 @@
     position: relative;
     // transform: scale(1.04) translateY(-1px);
     transform-origin: top;
+    @media only screen and (max-width: 600px) {
+      padding: 10px;
+    }
 
     &::before {
       content: '';
@@ -31,8 +34,6 @@
     display: block;
     height: 100%;
     object-fit: cover;
-    @media only screen and (max-width: 750px) {
-    }
   }
 
   &__title {
@@ -47,6 +48,10 @@
     width: 50%;
     line-height: 1.95;
     text-align: center;
+    @media only screen and (max-width: 600px) {
+      font-size: 2rem;
+      line-height: 2;
+    }
 
     span {
       -webkit-box-decoration-break: clone;
@@ -70,6 +75,11 @@
     display: flex;
     align-items: center;
     padding: 7.5rem 8rem 3.5rem 8rem;
+    @media only screen and (max-width: 460px) {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      padding: 7.5rem 6rem 3.5rem 2rem;
+    }
   }
 
   &__info {
@@ -77,9 +87,15 @@
     text-transform: uppercase;
     display: flex;
     align-items: center;
+    @media only screen and (max-width: 600px) {
+      font-size: 1.3rem;
+    }
 
     &:not(:last-child) {
       margin-right: 4.5rem;
+      @media only screen and (max-width: 600px) {
+        margin-right: 3rem;
+      }
     }
   }
 
